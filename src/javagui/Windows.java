@@ -4,40 +4,40 @@
  * and open the template in the editor.
  */
 package javagui;
-//PASO1 IMPORTAR 
+//PASO1 IMPORTAR  las librerias
 //import Gui.*;
-import javax.swing.*;//libreria grafica standar multiplataforma
+import javax.swing.*;//importamos todo el swing
 import java.awt.*;//libreria grafica del sistema OPERATIVO
 /**
  *
  * @author LP 13
  */
 //paso2 heredar mi  clase desde jframe
-public class MiVentana extends JFrame{
+public class Windows extends JFrame{
 
-  //paso 3 declara  los  elementos  que   vamos a  utulizar
-    JPanel mipanel;//creacion  de objeto  panel
-    JLabel milabel;
-    JTextField mitexto;
-    JButton miboton;
+  //paso 3 declara  los  elementos   a  utulizar
+    JPanel panel;//creacion  de objeto  panel
+    JLabel label;
+    JTextField text;
+    JButton boton;
     
-    //paso4 definicion del constructoc de la clase
-    public MiVentana() //tiene  el  mismo  nombre  de la clase
+    //paso4 definicion del constructor de la clase
+    public Windows() //tiene  el  mismo  nombre  de la clase
     {
-        //paso 5 crear e  inicializar los  objetos que utilizaremos
-    mipanel = new JPanel();
-    milabel = new JLabel();
-    mitexto = new JTextField();//10 son  los  caracteres
-    miboton = new JButton();
+        //paso 5 crear e  inicializar los  objetos 
+    panel = new JPanel();//creo un objeto tipo panel
+    label = new JLabel();
+    text = new JTextField(15);//15 caracteres
+    boton = new JButton();
     // paso 6 agregar los elementos  al jframe
-    this.add(mipanel);//agrego el panel al  frame
-    mipanel.add(milabel);//agrego los  elementos al joanel
-    mipanel.add(mitexto);
-    mipanel.add(miboton);
+    this.add(panel);//recomensdable agregar el panel al  frame
+    panel.add(label);//agregar un objeto label al panel
+    panel.add(text);
+    panel.add(boton);
     //paso7 propiedades de los  elementos
-    milabel.setText("nombre");
-    miboton.setText("enviar");
-    
+    label.setText("nombre");
+    boton.setText("enviar");
+    panel.setBackground(Color.blue);//color  de fondo del panel
     }
 }
     /*public static void main(String[] args) 
